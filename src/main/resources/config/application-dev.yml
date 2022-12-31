@@ -26,15 +26,15 @@ spring:
       enabled: true
       additional-exclude: static/**
     livereload:
-      enabled: false # we use Webpack dev server + BrowserSync for livereload
+      enabled: true # we use Webpack dev server + BrowserSync for livereload
   jackson:
     serialization:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mariadb://localhost:3306/account_analizar_manager?useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mariadb://localhost:3306/aa?useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password:
+    password: admin
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -44,9 +44,9 @@ spring:
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
   jpa:
-  liquibase:
-    # Remove 'faker' if you do not want the sample data to be loaded automatically
-    contexts: dev, faker
+  #  liquibase:
+  #    # Remove 'faker' if you do not want the sample data to be loaded automatically
+  #    contexts: dev, faker
   mail:
     host: localhost
     port: 25
