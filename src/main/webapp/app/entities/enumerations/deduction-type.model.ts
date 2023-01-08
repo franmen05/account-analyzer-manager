@@ -1,0 +1,11 @@
+export enum DeductionType {
+  COMMISSIONS = 'COMMISSIONS',
+
+  TAX = 'TAX',
+
+  TAXES = 'TAXES',
+
+  INTEREST = 'INTEREST',
+
+  NON_PAYMENT_FEE = 'NON_PAYMENT_FEE',
+}
