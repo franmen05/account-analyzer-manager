@@ -1,0 +1,22 @@
+enum DeductionType{
+    COMMISSIONS,
+    TAX,
+    TAXES,
+    INTEREST,
+    NON_PAYMENT_FEE
+}
+entity Deduction {
+	description String
+	type DeductionType
+}
+
+relationship ManyToOne{
+    Deduction{user} to User
+}
+
+
+// Set pagination options
+paginate Deduction with pagination
+
+// Set service options to all except few
+service all with serviceImpl
